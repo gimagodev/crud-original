@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD de Clientes</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <meta charset="utf-8" />
+    </head>
+     <body>
+        <h1><%=title %></h1>
+        <p>Preencha os dados abaixo para salvar o cliente.</p>
+        <form action="<%=action %>" method="POST">
+            <p>
+                <label>Nome: <input type="text" name="nome" value="<%= doc.nome %>" /></label>
+            </p>
+            <p>
+                <label>Idade: <input type="number" name="idade" value="<%= doc.idade %>" /></label>
+            </p>
+            <p>
+                </label>UF: 
+                    <select name="uf">
+                        <% const s="selected" %>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option> 
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option <% if(doc.uf==="RJ"){%> <%=s%> <%}%> >RJ</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <a href="/">Cancelar</a> | <input type="submit" value="Salvar" />
+            </p>
+        </form>
+     </body>
+</html>
