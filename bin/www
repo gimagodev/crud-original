@@ -16,7 +16,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**
@@ -90,5 +90,10 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
+  
   debug('Listening on ' + bind);
+  console.log("Aplicação CRUD-BOOTSTRAP");
+  console.log("Autor: Gideon M. Gonçalves");
+  console.log("Link:  http://localhost:4000")
+  console.log("Ouvindo na porta: "+ port);   // gideon
 }

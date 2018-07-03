@@ -9,15 +9,6 @@ router.get('/', function(req, res, next) {
     })
 });
 
-// /* GET New page. */
-// router.get('/new', function(req, res, next) {
-//     res.render('new', {
-//         title   : "Novo Cadastro:",
-//         action  : "/new",
-//         doc     : {"nome":"","idade":""}
-//     });
-// });
-
 /* GET New page. */
 router.get('/new', function(req, res, next) {
     res.render('new', {
